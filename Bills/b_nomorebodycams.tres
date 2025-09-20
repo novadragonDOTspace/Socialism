@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://4g0f3l1uf0x5"]
+
+[ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+
+[resource]
+script = ExtResource("1_cq1u5")
+Title = "End Surveillance Act"
+Description = "No more body cams on cops"
+MoneyTransfer = 15
+metadata/_custom_type_script = "uid://bpqmsdqkccblh"

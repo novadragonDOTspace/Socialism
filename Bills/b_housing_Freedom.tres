@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://dctfc1vd5o012"]
+
+[ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+
+[resource]
+script = ExtResource("1_cq1u5")
+Title = "Housing freedom act"
+Description = "You are free to increase the rent for your plebeian tenants on the housing you own"
+MoneyTransfer = 100
+metadata/_custom_type_script = "uid://bpqmsdqkccblh"

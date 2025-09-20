@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://cmyh8qp22vi2w"]
+
+[ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+
+[resource]
+script = ExtResource("1_cq1u5")
+Title = "Money for Tom"
+Description = "Tom is the name we gave our nuclear armageddon weapons"
+MoneyTransfer = 25
+metadata/_custom_type_script = "uid://bpqmsdqkccblh"

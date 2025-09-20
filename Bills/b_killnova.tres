@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://vbpwalpb4emn"]
+
+[ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+
+[resource]
+script = ExtResource("1_cq1u5")
+Title = "Pronouns Woman is Evil ???ß??"
+Description = "Kill Pronouns Woman"
+MoneyTransfer = 20
+metadata/_custom_type_script = "uid://bpqmsdqkccblh"

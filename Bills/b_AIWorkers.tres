@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://50y6iva8ts7n"]
+
+[ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+
+[resource]
+script = ExtResource("1_cq1u5")
+Title = "Free time for everyone!"
+Description = "Replace employees with AI to benefit corporations
+"
+MoneyTransfer = 60
+metadata/_custom_type_script = "uid://bpqmsdqkccblh"

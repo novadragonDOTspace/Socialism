@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://x10kumv1prop"
+
+[deps]
+
+files=["res://addons/Bills.Title.translation", "res://addons/Bills.Description.translation", "res://addons/Bills.TimeModify.translation", "res://addons/Bills.MoneyTransfer.translation", "res://addons/Bills.ProblemResolutionList.translation", "res://addons/Bills.Alignment.translation"]
+
+source_file="res://addons/Bills.csv"
+dest_files=["res://addons/Bills.Title.translation", "res://addons/Bills.Description.translation", "res://addons/Bills.TimeModify.translation", "res://addons/Bills.MoneyTransfer.translation", "res://addons/Bills.ProblemResolutionList.translation", "res://addons/Bills.Alignment.translation"]
+
+[params]
+
+compress=true
+delimiter=0

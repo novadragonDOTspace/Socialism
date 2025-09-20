@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Problem" load_steps=2 format=3 uid="uid://dgw0u06u23nnm"]
+
+[ext_resource type="Script" uid="uid://bmsb7gfp2ei0h" path="res://Problems/Problems.gd" id="1_dq61b"]
+
+[resource]
+script = ExtResource("1_dq61b")
+Name = "Housing Crisis"
+Budget = 1300
+metadata/_custom_type_script = "uid://bmsb7gfp2ei0h"

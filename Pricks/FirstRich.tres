@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Prick" load_steps=2 format=3 uid="uid://4kqdetgnt7yh"]
+
+[ext_resource type="Script" uid="uid://dmb042m5gpouv" path="res://Pricks/RichPrick.gd" id="1_lx2r8"]
+
+[resource]
+script = ExtResource("1_lx2r8")
+Name = "Jim Docks"
+metadata/_custom_type_script = "uid://dmb042m5gpouv"

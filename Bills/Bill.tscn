@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgldwxqvjulbc"]
+
+[ext_resource type="FontFile" uid="uid://ciiwtkn3uq4e" path="res://wondermail.ttf" id="1_5dciy"]
+[ext_resource type="Script" uid="uid://bfv7c02bs2e0j" path="res://Bills/billControl.gd" id="2_gfnpe"]
+[ext_resource type="Texture2D" uid="uid://0mo8cqh7sohv" path="res://blank_bill.png" id="2_ib6f4"]
+
+[sub_resource type="Theme" id="Theme_fc0e3"]
+default_font = ExtResource("1_5dciy")
+
+[node name="BillControll" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_fc0e3")
+theme_type_variation = &"dsfg"
+script = ExtResource("2_gfnpe")
+
+[node name="BlankBill" type="Sprite2D" parent="."]
+texture = ExtResource("2_ib6f4")
+centered = false
+
+[node name="HeadlineLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 212.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Current Headline: "
+
+[node name="ContentBillLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 212.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "ContentBill"
+autowrap_mode = 3
