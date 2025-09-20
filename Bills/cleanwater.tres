@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://bom4yeay78mws"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://bom4yeay78mws"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://bjnh6dvmjd5xu" path="res://Problems/water.tres" id="1_qvx30"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_pqaxx"]
+
+[sub_resource type="Resource" id="Resource_otj58"]
+script = ExtResource("2_pqaxx")
+Target = ExtResource("1_qvx30")
+ResolutionAmount = 250
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Make water clean again"
+Description = "Rebuild old infrastructure in rural communities"
+ProblemResolution = SubResource("Resource_otj58")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

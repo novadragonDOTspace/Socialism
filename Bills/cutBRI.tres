@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://56p1y3s5f475"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://56p1y3s5f475"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://da3u7iw6lrd17" path="res://Problems/violence.tres" id="1_xgxji"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_u76bq"]
+
+[sub_resource type="Resource" id="Resource_0nxte"]
+script = ExtResource("2_u76bq")
+Target = ExtResource("1_xgxji")
+ResolutionAmount = 250
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Cut the department of BRIv"
+Description = "Bombing Regional Infantsv"
+ProblemResolution = SubResource("Resource_0nxte")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"
