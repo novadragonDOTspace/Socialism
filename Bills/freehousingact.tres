@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Free housing act"
+Description = "Create more social housing projects to bring down rental costs"
+MoneyTransfer = 500
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

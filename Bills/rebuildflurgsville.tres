@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Rebuild Flurgsville"
+Description = "Help Flurgsville rebuild after the earthquake"
+MoneyTransfer = 350
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"
