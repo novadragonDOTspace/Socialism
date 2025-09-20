@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://cto30fxrovo0r"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://cto30fxrovo0r"]
 
+[ext_resource type="Resource" uid="uid://cx6w3oq7xm6sa" path="res://Problems/disease.tres" id="1_1rbxx"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_snpr1"]
+
+[sub_resource type="Resource" id="Resource_to7uo"]
+script = ExtResource("2_snpr1")
+Target = ExtResource("1_1rbxx")
+ResolutionAmount = 100
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Money for Paige"
+Description = "A scientist whose team is doing cutting edge research into a cure for ALS"
+ProblemResolution = SubResource("Resource_to7uo")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

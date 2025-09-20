@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://bsxlck2o4i77a"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://bsxlck2o4i77a"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://cx6w3oq7xm6sa" path="res://Problems/disease.tres" id="1_p5b1f"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_f0qm7"]
+
+[sub_resource type="Resource" id="Resource_a7n30"]
+script = ExtResource("2_f0qm7")
+Target = ExtResource("1_p5b1f")
+ResolutionAmount = 250
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Fund vaccine research"
+Description = "Money for vaccines"
+ProblemResolution = SubResource("Resource_a7n30")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

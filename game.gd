@@ -50,7 +50,7 @@ func ButtonBressed():
 	if Bills[0].ProblemResolution != null:
 		if Bills[0].ProblemResolution.Target == CurrentProblem.Prob:
 			CurrentProblem.Resolution += Bills[0].ProblemResolution.ResolutionAmount
-			Budget -= Bills[0].ProblemResolution.ResolutionAmount
+		Budget -= Bills[0].ProblemResolution.ResolutionAmount
 	
 	$Control/Budget.text = "¢" + str(float(Budget) / 10)
 	$Control/SolvedProblems.text = str(solvedProblems)
