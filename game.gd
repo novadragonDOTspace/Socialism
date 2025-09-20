@@ -47,12 +47,15 @@ func ButtonBressed():
 	var currentTime: float = TimerGame.time_left
 	TimerGame.start(currentTime + Bills[0].TimeModify)
 	Budget += Bills[0].MoneyTransfer
-	if Bills[0].ProblemResolution.Target == CurrentProblem.Prob:
-		CurrentProblem.Resolution += Bills[0].ProblemResolution.ResolutionAmount
+	if Bills[0].ProblemResolution != null:
+		if Bills[0].ProblemResolution.Target == CurrentProblem.Prob:
+			CurrentProblem.Resolution += Bills[0].ProblemResolution.ResolutionAmount
+			Budget -= Bills[0].ProblemResolution.ResolutionAmount
 	
 	$Control/Budget.text = "¢" + str(float(Budget) / 10)
 	$Control/SolvedProblems.text = str(solvedProblems)
 	$Control/TextureProgressBar.value = CurrentProblem.Resolution
+
 	print(CurrentProblem.Resolution)
 	BCN[0].OffTheyGo()
 	BCN.remove_at(0)

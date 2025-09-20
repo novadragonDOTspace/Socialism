@@ -29,13 +29,14 @@ offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Current Headline: "
+autowrap_mode = 3
 
 [node name="ContentBillLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 30.0
-offset_right = 212.0
-offset_bottom = 120.0
+offset_left = 3.0
+offset_top = 53.0
+offset_right = 211.0
+offset_bottom = 114.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "ContentBill"

@@ -1,7 +1,19 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://c1025rd416mtx"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://c1025rd416mtx"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://ctoluktdst6oe" path="res://Problems/climate.tres" id="1_u4bq7"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_8ljgy"]
+
+[sub_resource type="Resource" id="Resource_kblq2"]
+script = ExtResource("2_8ljgy")
+Target = ExtResource("1_u4bq7")
+ResolutionAmount = 300
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Establish the CSDSEPPCBv"
+Description = "Center for the Study and Development of Sustainable Energy Pilot Programs in Central Bergsville
+v"
+ProblemResolution = SubResource("Resource_kblq2")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Create more jobs"
+Description = "AI data center in every city"
+MoneyTransfer = 150
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

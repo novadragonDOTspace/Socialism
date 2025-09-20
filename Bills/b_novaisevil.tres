@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Kill those evil Children"
+Description = "You know, the ones overseas"
+MoneyTransfer = 30
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"
