@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://bd41vgmy2ic2r"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://bd41vgmy2ic2r"]
 
+[ext_resource type="Resource" uid="uid://dgw0u06u23nnm" path="res://Problems/housing.tres" id="1_061al"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_e1pch"]
+
+[sub_resource type="Resource" id="Resource_m544o"]
+script = ExtResource("2_e1pch")
+Target = ExtResource("1_061al")
+ResolutionAmount = 500
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Free housing act"
+Description = "Create more social housing projects to bring down rental costs"
+ProblemResolution = SubResource("Resource_m544o")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

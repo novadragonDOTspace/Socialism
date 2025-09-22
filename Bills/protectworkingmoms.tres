@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://datqtr7a2ct3h"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://datqtr7a2ct3h"]
 
+[ext_resource type="Resource" uid="uid://denhsxko8rxkp" path="res://Problems/wellbeing.tres" id="1_bokcy"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_ew4g7"]
+
+[sub_resource type="Resource" id="Resource_jnna0"]
+script = ExtResource("2_ew4g7")
+Target = ExtResource("1_bokcy")
+ResolutionAmount = 150
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Protections for working mothers"
+Description = "Ensure job security and flexible hours for working mothers"
+ProblemResolution = SubResource("Resource_jnna0")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

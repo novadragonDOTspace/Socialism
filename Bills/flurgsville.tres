@@ -1,7 +1,19 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://dtwa43fp0ocx4"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://dtwa43fp0ocx4"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://dgw0u06u23nnm" path="res://Problems/housing.tres" id="1_odin5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_5g2ec"]
+
+[sub_resource type="Resource" id="Resource_beryt"]
+script = ExtResource("2_5g2ec")
+Target = ExtResource("1_odin5")
+ResolutionAmount = 350
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Relief for Flurgsville"
+Description = "After the Flurgsville flood"
+MoneyTransfer = 350
+ProblemResolution = SubResource("Resource_beryt")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

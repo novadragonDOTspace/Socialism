@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://dfwe21b2wkrqq"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://dfwe21b2wkrqq"]
 
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="1_4ae7i"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://of74ym3hbbm1" path="res://Problems/exploit.tres" id="1_e4ooj"]
+
+[sub_resource type="Resource" id="Resource_e4ooj"]
+script = ExtResource("1_4ae7i")
+Target = ExtResource("1_e4ooj")
+ResolutionAmount = 150
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Re-Zone Commercial Areas"
+Description = "Higher taxes for big businesses in commercial areas"
+ProblemResolution = SubResource("Resource_e4ooj")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

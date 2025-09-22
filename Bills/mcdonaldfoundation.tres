@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://dndlwcvap41xn"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://dndlwcvap41xn"]
 
+[ext_resource type="Resource" uid="uid://cx6w3oq7xm6sa" path="res://Problems/disease.tres" id="1_8uuc7"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_q6icu"]
+
+[sub_resource type="Resource" id="Resource_0xh5n"]
+script = ExtResource("2_q6icu")
+Target = ExtResource("1_8uuc7")
+ResolutionAmount = 150
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Establish the McDonald Foundation"
+Description = "Named for Joe McDonald, a pioneer in the field of cancer research"
+ProblemResolution = SubResource("Resource_0xh5n")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

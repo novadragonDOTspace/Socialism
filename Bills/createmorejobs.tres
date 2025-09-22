@@ -15,4 +15,5 @@ script = ExtResource("1_cq1u5")
 Title = "Create more Jobs"
 Description = "Send more money to farmers so they con hire local youth and create jobs"
 ProblemResolution = SubResource("Resource_5o2aj")
+Alignment = 350
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"

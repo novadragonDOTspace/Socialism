@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://hro348hp2ckq"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://hro348hp2ckq"]
 
+[ext_resource type="Resource" uid="uid://cfiidprimcfij" path="res://Problems/edu.tres" id="1_7br3u"]
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_4jqlq"]
+
+[sub_resource type="Resource" id="Resource_nh8ym"]
+script = ExtResource("2_4jqlq")
+Target = ExtResource("1_7br3u")
+ResolutionAmount = 200
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Increase funds to the DMGAOFOYS"
+Description = "Department of Management for Government Agencies that Oversee the Futures of Our Young Scientists"
+ProblemResolution = SubResource("Resource_nh8ym")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"
