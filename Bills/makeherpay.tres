@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="Bill" load_steps=2 format=3 uid="uid://puqtfl5yfpox"]
+[gd_resource type="Resource" script_class="Bill" load_steps=5 format=3 uid="uid://puqtfl5yfpox"]
 
 [ext_resource type="Script" uid="uid://bpqmsdqkccblh" path="res://Bills/Bills.gd" id="1_cq1u5"]
+[ext_resource type="Resource" uid="uid://of74ym3hbbm1" path="res://Problems/exploit.tres" id="1_eiacw"]
+[ext_resource type="Script" uid="uid://bseyusmwxdd8c" path="res://ProblemResolutionCombo.gd" id="2_gt206"]
+
+[sub_resource type="Resource" id="Resource_pfm8q"]
+script = ExtResource("2_gt206")
+Target = ExtResource("1_eiacw")
+ResolutionAmount = 150
+metadata/_custom_type_script = "uid://bseyusmwxdd8c"
 
 [resource]
 script = ExtResource("1_cq1u5")
+Title = "Make Her Pay!!!"
+Description = "Investigate Mrs. Jim Docks for charity fraud"
+ProblemResolution = SubResource("Resource_pfm8q")
 metadata/_custom_type_script = "uid://bpqmsdqkccblh"
