@@ -6,7 +6,7 @@ on: push
 env:
   GODOT_VERSION: 4.5
   EXPORT_NAME: SocialismSimulator
-  PROJECT_PATH: test-project
+  PROJECT_PATH: .
 
 jobs:
   export-windows:
