@@ -1,4 +1,5 @@
 extends Resource
+
 class_name Bill
 
 @export var Title: String

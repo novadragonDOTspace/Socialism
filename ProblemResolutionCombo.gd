@@ -1,4 +1,5 @@
 extends Resource
+
 class_name ProblemResolutionCombo
 
 @export var Target: Problem

@@ -1,4 +1,5 @@
 extends Node
+
 class_name Game
 
 @export var AllProblems: Array[Problem]
@@ -20,11 +21,12 @@ class_name Game
 
 @export var Budget: int
 
+
 func BillsEmpty() -> void:
 	Bills = AllBills.duplicate_deep()
 	Bills.shuffle()
 
-	var i: int = 0;
+	var i: int = 0
 	for b in Bills:
 		var nb: BillControll = BillControllScene.instantiate()
 		nb.Headline = b.Title
@@ -40,10 +42,13 @@ func _ready() -> void:
 	CurrentPrick = AllPricks.pick_random()
 	CurrentProblem = ActiveProblem.new()
 	CurrentProblem.Prob = AllProblems.pick_random()
-	
+	$Control/Budget.text = "¢" + str(float(Budget) / 10) + "0B"
+	$TimerAccept.start()
 
 
-func ButtonBressed():
+func Accept():
+	if BCN[0].position != Vector2(200, 24):
+		return
 	var currentTime: float = TimerGame.time_left
 	TimerGame.start(currentTime + Bills[0].TimeModify)
 	Budget += Bills[0].MoneyTransfer
@@ -51,12 +56,16 @@ func ButtonBressed():
 		if Bills[0].ProblemResolution.Target == CurrentProblem.Prob:
 			CurrentProblem.Resolution += Bills[0].ProblemResolution.ResolutionAmount
 		Budget -= Bills[0].ProblemResolution.ResolutionAmount
-	
-	$Control/Budget.text = "¢" + str(float(Budget) / 10)
+
+	$Control/Budget.text = "¢" + str(float(Budget) / 10) + "0B"
 	$Control/SolvedProblems.text = str(solvedProblems)
 	$Control/TextureProgressBar.value = CurrentProblem.Resolution
 
 	print(CurrentProblem.Resolution)
+	KillCurrentProblem()
+
+
+func KillCurrentProblem():
 	BCN[0].OffTheyGo()
 	BCN.remove_at(0)
 	for i in BCN:
@@ -64,7 +73,9 @@ func ButtonBressed():
 	Bills.pop_front()
 	if Bills.size() == 0:
 		BillsEmpty()
-	
+	$TimerAccept.start()
+
+
 func _process(_delta: float) -> void:
 	if CurrentProblem.Resolution > CurrentProblem.Prob.Budget:
 		CurrentProblem = ActiveProblem.new()
@@ -75,7 +86,8 @@ func _process(_delta: float) -> void:
 	$Control/ProblemText.text = CurrentProblem.Prob.Name
 	$Control/TextureProgressBar.max_value = CurrentProblem.Prob.Budget
 
+
 func _input(_event: InputEvent) -> void:
-	if _event is  InputEventKey and _event.pressed:
+	if _event is InputEventKey and _event.pressed:
 		if _event.keycode == KEY_SPACE:
-			ButtonBressed()
+			Accept()
