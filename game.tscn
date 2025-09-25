@@ -187,7 +187,7 @@ vertical_alignment = 1
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 
-[node name="TimerAccept" type="Timer" parent="."]
+[node name="TimerDeny" type="Timer" parent="."]
 
 [connection signal="timeout" from="TimerGame" to="." method="_on_timer_game_timeout"]
-[connection signal="timeout" from="TimerAccept" to="." method="KillCurrentProblem"]
+[connection signal="timeout" from="TimerDeny" to="." method="KillCurrentProblem"]

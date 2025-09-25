@@ -2,6 +2,9 @@ extends Node
 
 class_name Game
 
+enum states { go, endscreen }
+@onready var current_State: states = states.go
+
 @export var AllProblems: Array[Problem]
 @export var AllBills: Array[Bill]
 @export var AllPricks: Array[Prick]
@@ -47,6 +50,8 @@ func _ready() -> void:
 
 
 func Accept():
+	if current_State != states.go:
+		return
 	if BCN[0].position != Vector2(200, 24):
 		return
 	var currentTime: float = TimerGame.time_left
@@ -66,6 +71,8 @@ func Accept():
 
 
 func KillCurrentProblem():
+	if current_State != states.go:
+		return
 	BCN[0].OffTheyGo()
 	BCN.remove_at(0)
 	for i in BCN:
@@ -77,27 +84,31 @@ func KillCurrentProblem():
 
 
 func _process(_delta: float) -> void:
-	if CurrentProblem.Resolution > CurrentProblem.Prob.Budget:
-		CurrentProblem = ActiveProblem.new()
-		CurrentProblem.Prob = AllProblems.pick_random()
-		solvedProblems += 1
-	$Control/TimerLabel.text = str(int($TimerGame.time_left) / 60) + ":"
-	var seconds = int($TimerGame.time_left) % 60
-	if seconds < 10:
-		$Control/TimerLabel.text += "0" + str(int($TimerGame.time_left) % 60)
-	else:
-		$Control/TimerLabel.text += str(int($TimerGame.time_left) % 60)
-	$Control/PrickName.text = CurrentPrick.Name
-	$Control/ProblemText.text = CurrentProblem.Prob.Name
-	$Control/TextureProgressBar.max_value = CurrentProblem.Prob.Budget
+	match current_State:
+		states.go:
+			if CurrentProblem.Resolution > CurrentProblem.Prob.Budget:
+				CurrentProblem = ActiveProblem.new()
+				CurrentProblem.Prob = AllProblems.pick_random()
+				solvedProblems += 1
+			$Control/TimerLabel.text = str(int($TimerGame.time_left) / 60) + ":"
+			var seconds = int($TimerGame.time_left) % 60
+			if seconds < 10:
+				$Control/TimerLabel.text += "0" + str(int($TimerGame.time_left) % 60)
+			else:
+				$Control/TimerLabel.text += str(int($TimerGame.time_left) % 60)
+			$Control/PrickName.text = CurrentPrick.Name
+			$Control/ProblemText.text = CurrentProblem.Prob.Name
+			$Control/TextureProgressBar.max_value = CurrentProblem.Prob.Budget
+		states.endscreen:
+			pass
 
 
 func _input(_event: InputEvent) -> void:
-	if _event is InputEventKey and _event.pressed:
-		if _event.keycode == KEY_SPACE:
-			Accept()
+	if current_State == states.go:
+		if _event is InputEventKey and _event.pressed:
+			if _event.keycode == KEY_SPACE:
+				Accept()
 
 
 func _on_timer_game_timeout() -> void:
-	# DO FUCKING SOMETHING, show an endstate thing
-	pass # Replace with function body.
+	current_State = states.endscreen
