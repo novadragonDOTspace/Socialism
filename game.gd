@@ -81,7 +81,12 @@ func _process(_delta: float) -> void:
 		CurrentProblem = ActiveProblem.new()
 		CurrentProblem.Prob = AllProblems.pick_random()
 		solvedProblems += 1
-	$Control/TimerLabel.text = str(int($TimerGame.time_left) / 60) + ":" + str(int($TimerGame.time_left) % 60)
+	$Control/TimerLabel.text = str(int($TimerGame.time_left) / 60) + ":"
+	var seconds = int($TimerGame.time_left) % 60
+	if seconds < 10:
+		$Control/TimerLabel.text += "0" + str(int($TimerGame.time_left) % 60)
+	else:
+		$Control/TimerLabel.text += str(int($TimerGame.time_left) % 60)
 	$Control/PrickName.text = CurrentPrick.Name
 	$Control/ProblemText.text = CurrentProblem.Prob.Name
 	$Control/TextureProgressBar.max_value = CurrentProblem.Prob.Budget
@@ -91,3 +96,8 @@ func _input(_event: InputEvent) -> void:
 	if _event is InputEventKey and _event.pressed:
 		if _event.keycode == KEY_SPACE:
 			Accept()
+
+
+func _on_timer_game_timeout() -> void:
+	# DO FUCKING SOMETHING, show an endstate thing
+	pass # Replace with function body.

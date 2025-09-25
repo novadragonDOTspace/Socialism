@@ -96,6 +96,7 @@ Budget = 10000
 
 [node name="TimerGame" type="Timer" parent="."]
 wait_time = 60.0
+one_shot = true
 autostart = true
 
 [node name="Control" type="Control" parent="."]
@@ -188,4 +189,5 @@ vertical_alignment = 1
 
 [node name="TimerAccept" type="Timer" parent="."]
 
+[connection signal="timeout" from="TimerGame" to="." method="_on_timer_game_timeout"]
 [connection signal="timeout" from="TimerAccept" to="." method="KillCurrentProblem"]
